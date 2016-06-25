@@ -1,0 +1,19 @@
+{
+  "name": "veyndan",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "requirejs": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
+}

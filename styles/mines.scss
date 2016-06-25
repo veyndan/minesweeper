@@ -1,0 +1,48 @@
+#content {
+  background: transparent;
+}
+
+#grid {
+  border-collapse: collapse;
+
+  td {
+    background: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.6);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    &.revealed {
+      cursor: default;
+      background: transparent;
+    }
+
+    &.mine {
+      background: url("../img/mine.png") no-repeat;
+      background-size: 100% 100%;
+    }
+
+    &.flag {
+      background: url("../img/flag.png") no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}
+
+#mine-count {
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  padding: 8px;
+  font-size: 12px;
+  float: right;
+  color: white;
+}

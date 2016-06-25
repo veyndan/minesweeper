@@ -1,0 +1,60 @@
+  html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.window {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.title-bar {
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.title-bar-action {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.72);
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  width: 24px;
+  border-radius: 4px;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.title-bar-action-close {
+  @extend .title-bar-action;
+  color: rgba(244, 67, 54, 0.72);
+
+  &:hover {
+    background: rgb(244, 67, 54);
+  }
+}
+
+#container {
+  /* Background pattern from subtlepatterns.com/dark-sharp-edges */
+  background: url("../img/pageBackground.png") repeat;
+}
+
+.fullscreen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
