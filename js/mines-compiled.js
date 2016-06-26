@@ -7,7 +7,7 @@ $(document).ready(function () {
         mines: 10,
         board: [],
         newGame: function () {
-            for (var row = 0; row < this.rows; row++) {
+            for (let row = 0; row < this.rows; row++) {
                 this.board[row] = [];
                 this.board[row].length = this.rows;
                 for (var col = 0; col < this.cols; col++) {
@@ -28,11 +28,7 @@ $(document).ready(function () {
                 } while (this.board[mineRow][mineCol].value === -1);
                 this.board[mineRow][mineCol].value = -1;
 
-                surrounding(this.rows, this.cols, mineRow, mineCol, (row, col) => {
-                    if (this.board[row][col].value !== -1) {
-                        this.board[row][col].value++;
-                    }
-                });
+                surrounding(this.rows, this.cols, mineRow, mineCol).map(elem => this.board[elem.row][elem.col]).filter(cell => cell.value >= 0).forEach(cell => cell.value++);
             }
         }
     };
@@ -80,14 +76,16 @@ function toggleFlag(event) {
     return false;
 }
 
-function surrounding(rows, cols, row, col, callback) {
+function surrounding(rows, cols, row, col) {
+    const result = [];
     for (let rowSurrounding = Math.max(0, row - 1); rowSurrounding <= Math.min(rows - 1, row + 1); rowSurrounding++) {
         for (let colSurrounding = Math.max(0, col - 1); colSurrounding <= Math.min(cols - 1, col + 1); colSurrounding++) {
             if (!(rowSurrounding === row && colSurrounding === col)) {
-                callback(rowSurrounding, colSurrounding);
+                result.push({ row: rowSurrounding, col: colSurrounding });
             }
         }
     }
+    return result;
 }
 
 function cellId(row, col, cols) {
