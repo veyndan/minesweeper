@@ -62,6 +62,12 @@ function reveal(event) {
 
     if (!cell.revealed && !cell.flagged) {
         game.board[row][col].revealed = true;
+
+        if (cell.value === 0) {
+            surrounding(game.rows, game.cols, row, col)
+                .forEach(elem => reveal({data: {game, row: elem.row, col: elem.col}}));
+        }
+
         const value = game.board[row][col].value;
         const element = $(`#${cellId(row, col, game.cols)}`);
         element.addClass('revealed');
