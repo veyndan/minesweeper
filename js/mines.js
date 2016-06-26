@@ -1,7 +1,7 @@
 "use strict";
 
 $(document).ready(function () {
-    var game = {
+    const game = {
         isFirstReveal: true,
         rows: 9,
         cols: 9,
@@ -11,7 +11,7 @@ $(document).ready(function () {
             for (let row = 0; row < this.rows; row++) {
                 this.board[row] = [];
                 this.board[row].length = this.rows;
-                for (var col = 0; col < this.cols; col++) {
+                for (let col = 0; col < this.cols; col++) {
                     this.board[row][col] = {
                         value: 0,
                         revealed: false,
@@ -23,7 +23,7 @@ $(document).ready(function () {
             $('#mine-count').text(this.mines);
         },
         initialize: function (row, col) {
-            for (var i = 0; i < this.mines; i++) {
+            for (let i = 0; i < this.mines; i++) {
                 do {
                     var mineRow = Math.floor(Math.random() * this.rows);
                     var mineCol = Math.floor(Math.random() * this.cols);
