@@ -46,6 +46,12 @@ $(document).ready(function () {
             tr.append(td);
         }
     }
+
+    var sec = 0;
+    $("#timer").html("000");
+    setInterval(function () {
+        $("#timer").html(("00" + ++sec).slice(-3));
+    }, 1000);
 });
 
 function reveal(event) {
