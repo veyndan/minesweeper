@@ -74,7 +74,11 @@ function toggleFlag(event) {
     }
 
     const mineCount = $('#mine-count');
-    mineCount.text(mineCount.text() - 1);
+    if (game.board[row][col].flagged) {
+        mineCount.text(Number(mineCount.text()) - 1);
+    } else {
+        mineCount.text(Number(mineCount.text()) + 1);
+    }
 
     return false;
 }
