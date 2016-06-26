@@ -2,6 +2,7 @@
 
 $(document).ready(function () {
     var game = {
+        isFirstReveal: true,
         rows: 9,
         cols: 9,
         mines: 10,
@@ -20,12 +21,13 @@ $(document).ready(function () {
             }
 
             $('#mine-count').text(this.mines);
-
+        },
+        initialize: function (row, col) {
             for (var i = 0; i < this.mines; i++) {
                 do {
                     var mineRow = Math.floor(Math.random() * this.rows);
                     var mineCol = Math.floor(Math.random() * this.cols);
-                } while (this.board[mineRow][mineCol].value === -1);
+                } while (this.board[mineRow][mineCol].value === -1 || (mineRow === row && mineCol === col));
                 this.board[mineRow][mineCol].value = -1;
 
                 surrounding(this.rows, this.cols, mineRow, mineCol)
@@ -52,6 +54,11 @@ $(document).ready(function () {
 function reveal(event) {
     const {game, row, col} = event.data;
     const cell = game.board[row][col];
+
+    if (game.isFirstReveal) {
+        game.initialize(row, col);
+        game.isFirstReveal = false;
+    }
 
     if (!cell.revealed && !cell.flagged) {
         game.board[row][col].revealed = true;
