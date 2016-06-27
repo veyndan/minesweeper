@@ -24,6 +24,9 @@ $(document).ready(function () {
             $('#mine-count').text(this.mines);
             this.isFirstReveal = true;
             this.revealedCount = 0;
+
+            $('#grid').empty();
+            this.drawBoard();
         },
         initialize: function (row, col) {
             for (let i = 0; i < this.mines; i++) {
@@ -35,20 +38,21 @@ $(document).ready(function () {
 
                 surrounding(this.rows, this.cols, mineRow, mineCol).map(elem => this.board[elem.row][elem.col]).filter(cell => cell.value >= 0).forEach(cell => cell.value++);
             }
+        },
+        drawBoard: function () {
+            for (let row = 0; row < game.rows; row++) {
+                const tr = $(document.createElement('tr')).appendTo($('#grid'));
+                for (let col = 0; col < game.cols; col++) {
+                    const td = $(document.createElement('td')).prop('id', cellId(row, col, game.cols));
+                    td.click({ game, row, col }, reveal);
+                    td.contextmenu({ game, row, col }, toggleFlag);
+                    tr.append(td);
+                }
+            }
         }
     };
 
     game.newGame();
-
-    for (let row = 0; row < game.rows; row++) {
-        const tr = $(document.createElement('tr')).appendTo($('#grid'));
-        for (let col = 0; col < game.cols; col++) {
-            const td = $(document.createElement('td')).prop('id', cellId(row, col, game.cols));
-            td.click({ game, row, col }, reveal);
-            td.contextmenu({ game, row, col }, toggleFlag);
-            tr.append(td);
-        }
-    }
 
     var sec = 0;
     $("#timer").html("000");
@@ -88,19 +92,7 @@ function reveal(event) {
             $('#overlay').show();
 
             $('#play-again').click(() => {
-                $('#grid').empty();
-
                 game.newGame();
-
-                for (let row = 0; row < game.rows; row++) {
-                    const tr = $(document.createElement('tr')).appendTo($('#grid'));
-                    for (let col = 0; col < game.cols; col++) {
-                        const td = $(document.createElement('td')).prop('id', cellId(row, col, game.cols));
-                        td.click({ game, row, col }, reveal);
-                        td.contextmenu({ game, row, col }, toggleFlag);
-                        tr.append(td);
-                    }
-                }
 
                 var sec = 0;
                 $("#timer").html("000");
