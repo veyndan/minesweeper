@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeabc904-f949-410e-9902-16890a159d4d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/.bin/rimraf-compiled.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/.bin/rimraf-compiled.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mines-compiled.js" afterPath="$PROJECT_DIR$/js/mines-compiled.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mines-compiled.js.map" afterPath="$PROJECT_DIR$/js/mines-compiled.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mines.js" afterPath="$PROJECT_DIR$/js/mines.js" />
@@ -34,7 +31,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -44,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mines.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mines.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/mines.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+            <state relative-caret-position="-189">
+              <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -57,7 +54,7 @@
       <file leaf-file-name="mines.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/mines.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-90">
+            <state relative-caret-position="150">
               <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding />
             </state>
@@ -93,9 +90,9 @@
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/styles/main.scss" />
         <option value="$PROJECT_DIR$/styles/main.scss" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/mines.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/styles/mines.scss" />
       </list>
     </option>
@@ -111,7 +108,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="679" />
+    <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -181,7 +178,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules/.bin/babel" />
@@ -302,12 +299,13 @@
       <workItem from="1466788446193" duration="13077000" />
       <workItem from="1466897628048" duration="2519000" />
       <workItem from="1466901080639" duration="14585000" />
-      <workItem from="1467043261552" duration="4653000" />
+      <workItem from="1467043261552" duration="5548000" />
+      <workItem from="1467069076332" duration="429000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140618000" />
+    <option name="totallyTimeSpent" value="141942000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -319,7 +317,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="679" height="1080" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25078124" sideWeight="0.4949495" order="0" side_tool="false" content_ui="combo" />
@@ -360,7 +358,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/js/main.js" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -515,13 +512,13 @@
     <entry file="file://$PROJECT_DIR$/css/main.css" />
     <entry file="file://$PROJECT_DIR$/scss/main.scss" />
     <entry file="file://$PROJECT_DIR$/styles/main.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/index.css" />
@@ -529,7 +526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -571,9 +567,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/bourbon/addons/_position.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/mines.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
+        <state relative-caret-position="150">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding />
         </state>
@@ -581,16 +593,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/mines.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        <state relative-caret-position="-189">
+          <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
           <folding />
         </state>
       </provider>
