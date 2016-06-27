@@ -51,7 +51,6 @@ p, td {
   position: absolute;
   justify-content: center;
   align-items: center;
-  background-color: #4CAF50;
   top: 0;
   left: 0;
   width: 100%;
@@ -60,6 +59,8 @@ p, td {
   #overlay #smiley-face {
     text-align: center;
     font-size: 56px; }
+    #overlay #smiley-face::after {
+      content: '\263A'; }
   #overlay #play-again {
     background: transparent;
     border: 2px solid white;
@@ -74,5 +75,11 @@ p, td {
     cursor: pointer; }
     #overlay #play-again:hover {
       background: rgba(255, 255, 255, 0.16); }
+
+.won {
+  background-color: #4CAF50; }
+
+.lost {
+  background-color: #F44336; }
 
 /*# sourceMappingURL=mines.css.map */

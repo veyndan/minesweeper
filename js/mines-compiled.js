@@ -1,5 +1,7 @@
 "use strict";
 
+var GameOverEnum = Object.freeze({ won: 1, lost: 2 });
+
 $(document).ready(function () {
     const game = {
         isFirstReveal: true,
@@ -9,6 +11,22 @@ $(document).ready(function () {
         mines: 10,
         board: [],
         seconds: 0,
+        gameOver: function (gameOverEnum) {
+            const overlay = $('#overlay');
+            overlay.removeClass('won lost');
+            if (gameOverEnum === GameOverEnum.won) {
+                overlay.addClass('won');
+            } else if (gameOverEnum === GameOverEnum.lost) {
+                overlay.addClass('lost');
+            }
+
+            overlay.show();
+
+            $('#play-again').click(() => {
+                this.newGame();
+                overlay.hide();
+            });
+        },
         newGame: function () {
             for (let row = 0; row < this.rows; row++) {
                 this.board[row] = [];
@@ -79,6 +97,10 @@ function reveal(event) {
         game.board[row][col].revealed = true;
         game.revealedCount++;
 
+        if (cell.value === -1) {
+            game.gameOver(GameOverEnum.lost);
+        }
+
         if (cell.value === 0) {
             surrounding(game.rows, game.cols, row, col).forEach(elem => reveal({ data: { game, row: elem.row, col: elem.col } }));
         }
@@ -92,13 +114,7 @@ function reveal(event) {
         element.text(value > 0 ? value : '');
 
         if (game.revealedCount === game.rows * game.cols - game.mines) {
-            $('#overlay').show();
-
-            $('#play-again').click(() => {
-                game.newGame();
-
-                $('#overlay').hide();
-            });
+            game.gameOver(GameOverEnum.won);
         }
     }
 }
