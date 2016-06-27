@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="aeabc904-f949-410e-9902-16890a159d4d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/mines.css" afterPath="$PROJECT_DIR$/styles/mines.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/mines.css.map" afterPath="$PROJECT_DIR$/styles/mines.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/mines.scss" afterPath="$PROJECT_DIR$/styles/mines.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mines-compiled.js" afterPath="$PROJECT_DIR$/js/mines-compiled.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mines-compiled.js.map" afterPath="$PROJECT_DIR$/js/mines-compiled.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mines.js" afterPath="$PROJECT_DIR$/js/mines.js" />
     </list>
     <ignored path="minesweeper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="510">
+              <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -42,18 +41,18 @@
       <file leaf-file-name="mines.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/mines.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+            <state relative-caret-position="615">
+              <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mines.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mines.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/mines.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+            <state relative-caret-position="120">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -88,10 +87,10 @@
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/styles/main.scss" />
         <option value="$PROJECT_DIR$/styles/main.scss" />
-        <option value="$PROJECT_DIR$/js/mines.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/styles/mines.scss" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/mines.js" />
       </list>
     </option>
   </component>
@@ -296,12 +295,12 @@
       <workItem from="1466775973471" duration="4449000" />
       <workItem from="1466788446193" duration="13077000" />
       <workItem from="1466897628048" duration="2519000" />
-      <workItem from="1466901080639" duration="10438000" />
+      <workItem from="1466901080639" duration="12996000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131818000" />
+    <option name="totallyTimeSpent" value="134376000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -313,7 +312,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="958" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="958" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25078124" sideWeight="0.4949495" order="0" side_tool="false" content_ui="combo" />
@@ -567,26 +566,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/mines.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/mines.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+        <state relative-caret-position="615">
+          <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mines.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding />
         </state>
       </provider>

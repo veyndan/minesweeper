@@ -3,6 +3,7 @@
 $(document).ready(function () {
     const game = {
         isFirstReveal: true,
+        revealedCount: 0,
         rows: 9,
         cols: 9,
         mines: 10,
@@ -21,6 +22,8 @@ $(document).ready(function () {
             }
 
             $('#mine-count').text(this.mines);
+            this.isFirstReveal = true;
+            this.revealedCount = 0;
         },
         initialize: function (row, col) {
             for (let i = 0; i < this.mines; i++) {
@@ -52,6 +55,8 @@ $(document).ready(function () {
     setInterval(function () {
         $("#timer").html(("00" + ++sec).slice(-3));
     }, 1000);
+
+    $('#overlay').hide();
 });
 
 function reveal(event) {
@@ -65,6 +70,7 @@ function reveal(event) {
 
     if (!cell.revealed && !cell.flagged) {
         game.board[row][col].revealed = true;
+        game.revealedCount++;
 
         if (cell.value === 0) {
             surrounding(game.rows, game.cols, row, col).forEach(elem => reveal({ data: { game, row: elem.row, col: elem.col } }));
@@ -77,6 +83,34 @@ function reveal(event) {
             element.addClass('mine');
         }
         element.text(value > 0 ? value : '');
+
+        if (game.revealedCount === game.rows * game.cols - game.mines) {
+            $('#overlay').show();
+
+            $('#play-again').click(() => {
+                $('#grid').empty();
+
+                game.newGame();
+
+                for (let row = 0; row < game.rows; row++) {
+                    const tr = $(document.createElement('tr')).appendTo($('#grid'));
+                    for (let col = 0; col < game.cols; col++) {
+                        const td = $(document.createElement('td')).prop('id', cellId(row, col, game.cols));
+                        td.click({ game, row, col }, reveal);
+                        td.contextmenu({ game, row, col }, toggleFlag);
+                        tr.append(td);
+                    }
+                }
+
+                var sec = 0;
+                $("#timer").html("000");
+                setInterval(function () {
+                    $("#timer").html(("00" + ++sec).slice(-3));
+                }, 1000);
+
+                $('#overlay').hide();
+            });
+        }
     }
 }
 
