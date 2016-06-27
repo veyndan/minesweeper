@@ -8,6 +8,7 @@ $(document).ready(function () {
         cols: 9,
         mines: 10,
         board: [],
+        seconds: 0,
         newGame: function () {
             for (let row = 0; row < this.rows; row++) {
                 this.board[row] = [];
@@ -27,6 +28,7 @@ $(document).ready(function () {
 
             $('#grid').empty();
             this.drawBoard();
+            this.resetTimer();
         },
         initialize: function (row, col) {
             for (let i = 0; i < this.mines; i++) {
@@ -52,16 +54,19 @@ $(document).ready(function () {
                     tr.append(td);
                 }
             }
+        },
+        setupTimer: function () {
+            startInterval(1, () =>
+                $("#timer").html(("00" + (this.seconds++)).slice(-3))
+            );
+        },
+        resetTimer: function () {
+            this.seconds = 0;
         }
     };
 
     game.newGame();
-
-    var sec = 0;
-    $("#timer").html("000");
-    setInterval(function () {
-        $("#timer").html(("00" + (++sec)).slice(-3));
-    }, 1000);
+    game.setupTimer();
 
     $('#overlay').hide();
 });
@@ -97,12 +102,6 @@ function reveal(event) {
 
             $('#play-again').click(() => {
                 game.newGame();
-
-                var sec = 0;
-                $("#timer").html("000");
-                setInterval(function () {
-                    $("#timer").html(("00" + (++sec)).slice(-3));
-                }, 1000);
 
                 $('#overlay').hide();
             })
@@ -142,4 +141,9 @@ function surrounding(rows, cols, row, col) {
 
 function cellId(row, col, cols) {
     return row * cols + col;
+}
+
+function startInterval(seconds, callback) {
+    callback();
+    setInterval(callback, seconds * 1000);
 }
